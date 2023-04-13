@@ -15,15 +15,22 @@ int main()
     {
         // binary operator
     case 'B':
+        printf("**Arithmetic operator**\n\n");
         printf("For + operation Enter 1\n");
         printf("For - operation Enter 2\n");
         printf("For * operation Enter 3\n");
-        printf("For / operation Enter 4\n");
+        printf("For / operation Enter 4\n\n");
+        printf("**Bitwise operator**\n\n");
         printf("For & operation Enter 5\n");
         printf("For | operation Enter 6\n");
         printf("For >> operation Enter 7\n");
         printf("For << operation Enter 8\n");
-        printf("For ^ operation Enter 9\n");
+        printf("For ^ operation Enter 9\n\n");
+        printf("**Relational Operator\n\n");
+        printf("For == operation Enter 10\n");
+        printf("For <= operation Enter 11\n");
+        printf("For >= operation Enter 12\n");
+        printf("For > operation Enter 13\n");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -62,6 +69,58 @@ int main()
         case 9:
             result = (x ^ y);
             printf("%d ^ %d = %d\n", x, y, result);
+            break;
+        case 10:
+            result = (x == y);
+           switch (result)
+           {
+           case 1:
+            printf("%d is equal to %d",x,y);
+            break;
+           
+           default:
+            printf("%d is not equal to %d",x,y);
+            break;
+           }
+            break;
+        case 11:
+            result = (x >= y);
+             switch (result)
+           {
+           case 1:
+            printf("%d is greater then or equal to %d",x,y);
+            break;
+           
+           default:
+            printf("%d is greater then or equal to %d",y,x);
+            break;
+           }
+            break;
+        case 12:
+            result = (x <= y);
+             switch (result)
+           {
+           case 1:
+            printf("%d is less then or equal to %d",x,y);
+            break;
+           
+           default:
+            printf("%d is less then or equal to %d",y,x);
+            break;
+           }
+            break;
+        case 13:
+            result = (x > y);
+            switch (result)
+           {
+           case 1:
+            printf("%d is greater then %d",x,y);
+            break;
+           
+           default:
+            printf("%d is less then %d",x,y);
+            break;
+           }
             break;
 
         default:
